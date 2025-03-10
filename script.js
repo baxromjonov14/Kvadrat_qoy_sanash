@@ -23,14 +23,17 @@ console.log(qoyxona);
 
 
 let son = +prompt("Kvadrat tomoni uzunligini kiriting.")
-while (isNaN(son) || son==0) {
+while (isNaN(son) || son==0 ) {
     son = +prompt("Kvadrat tomoni uzunligini kiriting.")
+}
+if (son % 2 == 0) {
+    son++; 
 }
 alert("Natijani ko'rish uchun Console oynasiga o'ting.")
 let kvadrat = ""
 for (let i = 0; i < son; i++) {
     for (let j = 0; j < son; j++) {
-        if (i==j || i==0 || j==0 || i==son-1 || j==son-1) {
+        if (i==j || i==0 || j==0 || i==son-1 || j==son-1 || i==son-1 || j==son-1-i ) {
             kvadrat += "{*}"
         } else {
             kvadrat += "   "
@@ -39,6 +42,4 @@ for (let i = 0; i < son; i++) {
     console.log(kvadrat);
     kvadrat = ''
 }
-
-
 
